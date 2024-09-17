@@ -4,18 +4,28 @@ Ce projet concerne la détection de fraude dans les transactions par carte de cr
 
 ## Contenu du Notebook
 
-Le notebook comprend les étapes suivantes :
+Le notebook couvre les étapes suivantes :
 
-1. **Chargement des Données**: Importation du dataset "creditcard.csv" à partir de Google Drive.
+1. **Chargement des Données**: Importation du dataset "creditcard.csv" depuis Google Drive, contenant des transactions par carte de crédit, incluant des exemples de fraudes.
+
 2. **Analyse Exploratoire des Données (EDA)**:
-   - Examen de la distribution des classes pour identifier le déséquilibre des données.
-   - Visualisation des données pour mieux comprendre les caractéristiques.
+   - Analyse de la distribution des classes pour mettre en évidence le déséquilibre des données entre les transactions normales et frauduleuses.
+   - Visualisation des caractéristiques des transactions pour identifier des tendances et des anomalies potentielles.
+
 3. **Feature Engineering et Sélection**:
-   - Ingénierie des caractéristiques pour améliorer la performance du modèle.
-   - Sélection des caractéristiques pertinentes pour la détection de fraude.
-4. **Séparation Train-Test**: Division des données en ensembles d'entraînement et de test pour évaluer les performances du modèle.
-5. **Entraînement du Modèle**: Construction et entraînement du modèle de machine learning pour la détection de fraude.
-6. **Évaluation du Modèle**: Évaluation des performances du modèle à l'aide de métriques telles que la précision et la matrice de confusion.
+   - Création et transformation des caractéristiques pour améliorer la capacité du modèle à distinguer les transactions frauduleuses.
+   - Sélection des caractéristiques les plus pertinentes pour la détection de fraude, en éliminant celles qui sont moins informatives.
+
+4. **Séparation Train-Test**: Division des données en ensembles d'entraînement et de test pour permettre une évaluation impartiale du modèle.
+
+5. **Entraînement du Modèle**: 
+   - **Calcul de la Moyenne et de l'Écart-type**: Le modèle calcule la moyenne (`vect_u`) et l'écart-type (`vect_sigm`) des caractéristiques sur l'ensemble d'entraînement pour établir un profil des transactions typiques.
+   - **Détection d'Anomalies**: Utilisation de ces statistiques pour identifier les transactions qui s'écartent significativement de la norme. Un seuil (`eps`) est défini pour déterminer si une transaction est anormale ou potentiellement frauduleuse. Les transactions qui s'écartent trop de la moyenne sont signalées comme suspectes.
+
+   Cette approche permet d'optimiser la détection des fraudes en ajustant le seuil de tolérance (`eps`) pour trouver un équilibre entre la détection de toutes les fraudes possibles et la minimisation des faux positifs.
+
+6. **Évaluation du Modèle**: Évaluation des performances du modèle en utilisant des métriques telles que la précision et le F2-Score.
+
 
 ## Prérequis
 
