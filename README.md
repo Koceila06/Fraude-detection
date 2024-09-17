@@ -36,8 +36,6 @@ Pour exécuter ce notebook, les bibliothèques suivantes sont nécessaires :
 - scikit-learn
 - plotly
 
-Assurez-vous également d'avoir accès à Google Drive si vous souhaitez charger les données de la même manière.
-
 ## Utilisation
 
 1. **Installation des dépendances**: Assurez-vous d'installer toutes les bibliothèques nécessaires. Vous pouvez le faire en exécutant :
