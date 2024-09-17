@@ -39,7 +39,7 @@ Assurez-vous également d'avoir accès à Google Drive si vous souhaitez charger
 ## Structure des Fichiers
 
 - `Détection_Fraude.ipynb`: Le notebook principal contenant le code et les analyses.
-- `creditcard.csv`: Le fichier de données utilisé pour entraîner et évaluer le modèle (chargé dans Google Drive).
+- `creditcard.csv`: Le fichier de données utilisé pour entraîner et évaluer le modèle (à charger sur Google Drive).
 
 ## Résultats
 
